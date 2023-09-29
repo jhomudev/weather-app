@@ -6,7 +6,7 @@ import ProgressChargeData from '../components/ProgressChargeData'
 
 const Compose = ({ data }: { data: WeatherForecastData }) => {
   const { list } = data
-  const onlyFiveList = list.filter((_, id) => id < 5)
+  const onlyFiveList = list.filter((_, id) => id % 8 === 0)
   return (
     <motion.ul className='grid gap-5 grid-cols-[repeat(auto-fit,minmax(min(100%,140px),1fr))]'>
       {
